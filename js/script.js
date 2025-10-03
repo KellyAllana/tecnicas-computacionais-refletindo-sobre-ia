@@ -12,13 +12,13 @@ const telaInicial = document.querySelector(".tela-inicial");
 
 let atual = 0;
 let perguntaAtual;
-let historiaFinal = "";
+let historiaFinal = "thanks!";
 
 botaoIniciar.addEventListener('click', iniciaJogo);
 
 function iniciaJogo() {
     atual = 0;
-    historiaFinal = "";
+    historiaFinal = "thanks!";
     telaInicial.style.display = 'none';
     caixaPerguntas.classList.remove("mostrar");
     caixaAlternativas.classList.remove("mostrar");
@@ -59,9 +59,9 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = `Em 2049, ${nome}`;
+    caixaPerguntas.textContent = `Em 2050´, ${nome}`;
     textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
+    caixaAlternativas.textContent = "nomes";
     caixaResultado.classList.add("mostrar");
     botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
@@ -78,5 +78,6 @@ function substituiNome() {
         pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
     }
 }
+
 
 substituiNome();
